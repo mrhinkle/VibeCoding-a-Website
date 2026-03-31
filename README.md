@@ -45,7 +45,7 @@ By completing VibeCoding, you'll create a **professional website tailored to you
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/VibeCoding-a-Website.git
+git clone https://github.com/mrhinkle/VibeCoding-a-Website.git
 cd VibeCoding-a-Website
 ```
 
@@ -251,30 +251,13 @@ Before you start, make sure you have:
 
 ---
 
-## Contributing
+## Feedback & Issues
 
-We welcome contributions! VibeCoding is built by and for the community.
+VibeCoding is provided as-is by [The AI Enterprise](https://theaienterprise.io/). We're not accepting pull requests at this time, but we do want to hear from you.
 
-### How to Contribute
+**Found a bug or have a suggestion?** Open a ticket on [GitHub Issues](https://github.com/mrhinkle/VibeCoding-a-Website/issues) and we'll take a look.
 
-**Skills:** Build new skills that extend VibeCoding's capabilities
-- See [Skill Development Guide](./docs/skill-development-guide.md)
-- Examples: social media optimizer, email template generator, CMS integration
-
-**Course Content:** Create lessons, tutorials, or case studies
-- See [CONTRIBUTING.md](./docs/CONTRIBUTING.md)
-- Examples: "How I built my agency site", video tutorials, written guides
-
-**Examples:** Contribute example sites showing what's possible
-- Add to `/examples/` with full source code
-- Include before/after, performance metrics, deployment notes
-
-**Bug Reports & Issues:** Help us find and fix problems
-- Check existing issues first
-- Provide clear reproduction steps
-- Include system info (OS, Claude Code version, etc.)
-
-See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for detailed guidelines.
+**Want to build your own skills?** The [Skill Development Guide](./docs/skill-development-guide.md) explains the SKILL.md format so you can extend VibeCoding in your own fork.
 
 ---
 
@@ -303,6 +286,4 @@ Special thanks to the Claude Code and Manus teams for making this possible.
 4. Build your site
 5. Deploy
 
-**Questions?** See [Docs](./docs/) for guides, [Issues](https://github.com/yourusername/VibeCoding-a-Website/issues) for support, or [Discussions](https://github.com/yourusername/VibeCoding-a-Website/discussions) to chat with the community.
-
-Happy building! 🚀
+**Questions?** See [Docs](./docs/) for guides or [open a ticket](https://github.com/mrhinkle/VibeCoding-a-Website/issues) if you run into trouble.

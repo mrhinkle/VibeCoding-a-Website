@@ -542,7 +542,7 @@ Questions while developing your skill?
 
 - **Read existing skills** — site-interviewer and performance-optimizer are well-documented
 - **Review this guide** — Likely answers are here
-- **Ask in GitHub Discussions** — Community is helpful
+- **Open a GitHub Issue** — We'll take a look
 - **Open an issue** — We'll help if you're stuck
 
 Happy skill building! 🚀

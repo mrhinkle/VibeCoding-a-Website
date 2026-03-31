@@ -479,6 +479,4 @@ Square 400x300px. High contrast, readable at small sizes.
 5. **Start generating images** using those prompts
 6. **Integrate into your site** (Claude Code handles this)
 
-For more help, see [README.md](../README.md) or join the VibeCoding community in GitHub Discussions.
-
-Happy designing! 🎨
+For more help, see [README.md](../README.md) or [open a ticket](https://github.com/mrhinkle/VibeCoding-a-Website/issues).
