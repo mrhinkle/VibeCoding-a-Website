@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediate Action Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #FFFFFF; font-family: 'Inter Tight', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: #FFFFFF;
+            padding: 48px 72px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .slide-header { border-bottom: 2px solid #E5E7EB; padding-bottom: 16px; }
+        h1 { font-size: 46px; font-weight: 800; color: #111111; letter-spacing: -1px; margin: 0; }
+        .subtitle { font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #666; margin-top: 6px; }
+        .plan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 32px;
+            flex: 1;
+        }
+        .plan-card {
+            border: 1px solid #E5E7EB;
+            background: #F9FAFB;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        .plan-card.highlight {
+            border-color: #f44800;
+            background: rgba(244, 72, 0, 0.05);
+        }
+        .step-number {
+            font-size: 80px;
+            font-weight: 800;
+            color: #E5E7EB;
+            line-height: 0.8;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 1;
+        }
+        .plan-card.highlight .step-number { color: #f44800; opacity: 0.1; }
+        .card-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #111111;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .card-desc {
+            font-size: 20px;
+            color: #4B5563;
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+        }
+        .time-badge {
+            display: inline-block;
+            background: #111111;
+            color: #FFFFFF;
+            padding: 6px 14px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 4px;
+            align-self: flex-start;
+            margin-bottom: 8px;
+        }
+        .plan-card.highlight .time-badge { background: #f44800; color: #FFFFFF; }
+        
+        /* AIOS icon upper right */
+        .aios-icon-topright { position: absolute; top: 24px; right: 32px; width: 44px; height: 44px; object-fit: contain; }
+        
+        /* NEW AIOS logo bottom right */
+                        .aios-logo-bottom { 
+            position: absolute; 
+            bottom: 8px; 
+            right: 40px; 
+            height: 48px; 
+            width: auto; 
+            object-fit: contain; 
+        }
+        /* Footer text bottom left */
+        .slide-footer {
+            position: absolute;
+            bottom: 24px;
+            left: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #f44800;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX0ljb25fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMGxqYjI1ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=X5KfJVTDDMpWHIkpziQ7ABwpV-5NG6DB4f97EiNVqXafNJJcqetv6UdQxfecm-8WNQtPlAa0qmgZa29xEwtuRW~p~YP85Ll7NOTXq~z1Gq6VWgJjHXlDkAYa1~EuriFqM2Pzq5CjcsLpkst-piGkYjO~gMJ7Cy84T~RMkSK1rawIK8mcJrT9Jgf41I3N946MgAgp6MIjAlNhq85BEbhJmywwYjdKR2owct5nPmX42NiUyGhVd66pXFmP45Q0kveyDSbSTSlnv1u7~oxaVTA8LQV53aoeC1bIC3FVS-hKflrBMNO-BUnjOheey4KL9KXbr4EwIacPnTBQSeRp2N0Z2g__" alt="AIOS" class="aios-icon-topright">
+
+        <div class="slide-header">
+            <h1>Monday Morning Plan</h1>
+            <p class="subtitle">&gt; What to do next week</p>
+        </div>
+
+        <div class="plan-grid">
+            <div class="plan-card">
+                <span class="step-number">01</span>
+                <div class="time-badge">1 Hour</div>
+                <div class="card-title">Audit</div>
+                <div class="card-desc">Identify one repetitive, data-heavy task that your team hates doing.</div>
+            </div>
+            <div class="plan-card highlight">
+                <span class="step-number">02</span>
+                <div class="time-badge">2 Hours</div>
+                <div class="card-title">Build</div>
+                <div class="card-desc">Create a "Lazy First Draft" automation using the S.M.A.R.T. framework.</div>
+            </div>
+            <div class="plan-card">
+                <span class="step-number">03</span>
+                <div class="time-badge">30 Mins</div>
+                <div class="card-title">Share</div>
+                <div class="card-desc">Demo the ugly v1 to your team. Don't wait for perfection.</div>
+            </div>
+        </div>
+
+        <!-- Footer text -->
+        <div class="slide-footer">AI FOR BUSINESS PROFESSIONALS | BEYOND THE PROMPT: CREATING REPRODUCIBLE WORKFLOWS</div>
+        <!-- New Logo at Bottom Right -->
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX2xvZ29fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMnh2WjI5ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=AImjU9SRSopJSCIJLVYJPLGJCkkVUxve8OcCZY6aByZGLUVreWnZrmPFUpPOQXLElSt8V6Bd7meqyvOFHGmQHR87~6sC474194CeF~M0k0~Ea6i1CC-DfGCTdmOroJqOSuIlQYy8A9FVptm6GvHHJJHTWBOkawiPIMqKVVh06AInQVN2Ynq8NNHrVSXmEGS35VC~UDmRBYiIiX56RiAXAjR2bgmqcjI~9H7Sag6xMcFscmtU88F0k2BqNwJO19mXUmvCbKMqBAbWWPi~itMOnxsOOggKeAr8IJ9bfu4qG~hCcI8hb-l2oF0pOZR0hABHHGdKmIZtV74XaJwgOynAAg__" alt="AIOS" class="aios-logo-bottom">
+    </div>
+</body>
+</html>

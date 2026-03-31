@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with us using our contact form. We'd love to hear from you.">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Us - VibeCoding">
+  <meta property="og:description" content="Get in touch with us using our contact form. We'd love to hear from you.">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact Us - VibeCoding">
+  <meta name="twitter:description" content="Get in touch with us using our contact form. We'd love to hear from you.">
+  
+  <title>Contact Us - VibeCoding</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+</head>
+<body>
+  <!-- Skip to Main Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="index.html" class="logo">✨ VibeCoding</a>
+        
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav id="nav-menu" aria-hidden="true">
+          <a href="index.html">Home</a>
+          <a href="#features">Features</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <div class="contact-hero-content">
+          <h1>Get in Touch</h1>
+          <p>Have a question or want to work with us? We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-container">
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            
+            <div class="info-item">
+              <h3>Email</h3>
+              <p><a href="mailto:hello@vibecoding.com">hello@vibecoding.com</a></p>
+            </div>
+            
+            <div class="info-item">
+              <h3>Phone</h3>
+              <p><a href="tel:+14155551234">(415) 555-1234</a></p>
+            </div>
+            
+            <div class="info-item">
+              <h3>Location</h3>
+              <address>
+                San Francisco, CA<br>
+                United States
+              </address>
+            </div>
+            
+            <div class="info-item">
+              <h3>Follow Us</h3>
+              <div class="social-links">
+                <a href="https://twitter.com" aria-label="Twitter" title="Follow us on Twitter">𝕏</a>
+                <a href="https://linkedin.com" aria-label="LinkedIn" title="Follow us on LinkedIn">in</a>
+                <a href="https://github.com" aria-label="GitHub" title="Follow us on GitHub">⚙</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Contact Form -->
+          <form id="contact-form" class="contact-form" method="POST" action="/api/contact" novalidate>
+            <div class="form-group">
+              <label for="name">Name <span aria-label="required">*</span></label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Your full name"
+                required
+                autocomplete="name"
+                aria-required="true"
+              >
+              <div class="form-error" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span aria-label="required">*</span></label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="your.email@example.com"
+                required
+                autocomplete="email"
+                aria-required="true"
+              >
+              <div class="form-error" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="(555) 123-4567"
+                autocomplete="tel"
+              >
+              <div class="form-help">Optional - we'll use this to follow up if needed</div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company" 
+                placeholder="Your company name"
+                autocomplete="organization"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject <span aria-label="required">*</span></label>
+              <select 
+                id="subject" 
+                name="subject" 
+                required
+                aria-required="true"
+              >
+                <option value="">Select a subject...</option>
+                <option value="inquiry">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="form-error" id="subject-error"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span aria-label="required">*</span></label>
+              <textarea 
+                id="message" 
+                name="message" 
+                placeholder="Tell us more about your inquiry..."
+                required
+                aria-required="true"
+              ></textarea>
+              <div class="form-error" id="message-error"></div>
+            </div>
+
+            <!-- Honeypot Field (Anti-spam) -->
+            <input 
+              type="text" 
+              name="website" 
+              style="display: none;" 
+              tabindex="-1" 
+              autocomplete="off"
+              aria-hidden="true"
+            >
+
+            <!-- Form Consent -->
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input 
+                  type="checkbox" 
+                  id="consent" 
+                  name="consent" 
+                  required
+                  aria-required="true"
+                >
+                I agree to be contacted about my inquiry
+              </label>
+              <div class="form-error" id="consent-error"></div>
+              <p class="form-help">We respect your privacy. We'll only use your information to respond to your inquiry.</p>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-btn">
+                <span id="btn-text">Send Message</span>
+                <span id="btn-spinner" class="spinner hidden"></span>
+              </button>
+            </div>
+
+            <!-- Form Status Messages -->
+            <div id="form-success" class="form-status success hidden" role="alert">
+              <strong>Success!</strong> Your message has been sent. We'll get back to you soon.
+            </div>
+            <div id="form-error-message" class="form-status error hidden" role="alert">
+              <strong>Error!</strong> Something went wrong. Please try again or contact us directly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        
+        <div class="faq-container">
+          <details class="faq-item">
+            <summary>How quickly will you respond?</summary>
+            <p>We aim to respond to all inquiries within 24 business hours. For urgent matters, please call us directly.</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary>What information should I include?</summary>
+            <p>Please include as much detail as possible about your inquiry. This helps us provide you with a more accurate and helpful response.</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary>Do you offer phone support?</summary>
+            <p>Yes! You can reach us at (415) 555-1234 during business hours, Monday through Friday, 9 AM to 5 PM PST.</p>
+          </details>
+          
+          <details class="faq-item">
+            <summary>Can I get a callback instead?</summary>
+            <p>Absolutely! Let us know in your message and we'll schedule a time to call you back at your convenience.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>VibeCoding</h3>
+          <p>Building beautiful, functional websites with Claude Code and Manus.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 VibeCoding. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Contact Form Script -->
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (menuToggle) {
+      menuToggle.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        navMenu.setAttribute('aria-hidden', isExpanded);
+      });
+
+      // Close menu when link is clicked
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          navMenu.setAttribute('aria-hidden', 'true');
+        });
+      });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Contact Form Handling
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnSpinner = document.getElementById('btn-spinner');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error-message');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Clear previous messages
+        successMsg.classList.add('hidden');
+        errorMsg.classList.add('hidden');
+
+        // Validate form
+        if (!validateForm()) {
+          return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.textContent = 'Sending...';
+        btnSpinner.classList.remove('hidden');
+
+        try {
+          const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            company: document.getElementById('company').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value,
+            consent: document.getElementById('consent').checked
+          };
+
+          // Check honeypot
+          const honeypot = document.querySelector('input[name="website"]').value;
+          if (honeypot) {
+            console.warn('Honeypot field detected');
+            showSuccess();
+            return;
+          }
+
+          // Send to API
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+          });
+
+          if (response.ok) {
+            showSuccess();
+            contactForm.reset();
+          } else {
+            showError();
+          }
+        } catch (error) {
+          console.error('Form submission error:', error);
+          showError();
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          btnText.textContent = 'Send Message';
+          btnSpinner.classList.add('hidden');
+        }
+      });
+
+      // Form Validation
+      function validateForm() {
+        let isValid = true;
+
+        // Clear all errors
+        document.querySelectorAll('.form-error').forEach(error => {
+          error.textContent = '';
+        });
+        document.querySelectorAll('.form-group').forEach(group => {
+          group.classList.remove('error');
+        });
+
+        // Validate required fields
+        const name = document.getElementById('name').value.trim();
+        if (!name) {
+          setFieldError('name', 'Name is required');
+          isValid = false;
+        }
+
+        const email = document.getElementById('email').value.trim();
+        if (!email) {
+          setFieldError('email', 'Email is required');
+          isValid = false;
+        } else if (!isValidEmail(email)) {
+          setFieldError('email', 'Please enter a valid email address');
+          isValid = false;
+        }
+
+        const subject = document.getElementById('subject').value;
+        if (!subject) {
+          setFieldError('subject', 'Please select a subject');
+          isValid = false;
+        }
+
+        const message = document.getElementById('message').value.trim();
+        if (!message) {
+          setFieldError('message', 'Message is required');
+          isValid = false;
+        } else if (message.length < 10) {
+          setFieldError('message', 'Message must be at least 10 characters');
+          isValid = false;
+        }
+
+        const consent = document.getElementById('consent').checked;
+        if (!consent) {
+          setFieldError('consent', 'You must agree to be contacted');
+          isValid = false;
+        }
+
+        return isValid;
+      }
+
+      function setFieldError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const errorDiv = document.getElementById(fieldId + '-error') || field.parentElement.querySelector('.form-error');
+        if (errorDiv) {
+          errorDiv.textContent = message;
+        }
+        field.closest('.form-group').classList.add('error');
+      }
+
+      function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
+
+      function showSuccess() {
+        successMsg.classList.remove('hidden');
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast('Message sent successfully!', 'success');
+      }
+
+      function showError() {
+        errorMsg.classList.remove('hidden');
+        errorMsg.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        showToast('Failed to send message. Please try again.', 'error');
+      }
+    }
+
+    // Toast Notification System
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = `toast toast-${type}`;
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+      toast.textContent = message;
+
+      container.appendChild(toast);
+
+      // Auto-remove after 5 seconds
+      setTimeout(() => {
+        toast.remove();
+      }, 5000);
+    }
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('scroll-animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all cards and FAQ items
+    document.querySelectorAll('.info-item, .faq-item').forEach(el => {
+      observer.observe(el);
+    });
+
+    // FAQ Details smooth animation
+    document.querySelectorAll('details').forEach(details => {
+      details.addEventListener('toggle', function() {
+        if (this.open) {
+          const summary = this.querySelector('summary');
+          summary.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
+  </script>
+
+  <!-- Additional Styles for Contact Page -->
+  <style>
+    /* Breadcrumb Navigation */
+    .breadcrumb-nav {
+      padding: var(--space-md);
+      background-color: white;
+      border-bottom: 1px solid var(--neutral-200);
+    }
+
+    .breadcrumb {
+      list-style: none;
+      display: flex;
+      gap: var(--space-sm);
+      font-size: var(--font-size-sm);
+      color: var(--neutral-600);
+    }
+
+    .breadcrumb li {
+      margin-bottom: 0;
+    }
+
+    .breadcrumb a {
+      color: var(--primary-color);
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Hero Section */
+    .contact-hero {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: var(--space-2xl) var(--space-md);
+      text-align: center;
+    }
+
+    .contact-hero-content h1 {
+      margin-top: 0;
+      font-size: var(--font-size-4xl);
+      margin-bottom: var(--space-md);
+    }
+
+    .contact-hero-content p {
+      font-size: var(--font-size-lg);
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: var(--space-3xl) var(--space-md);
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-3xl);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr 1.2fr;
+      }
+    }
+
+    /* Contact Information */
+    .contact-info h2 {
+      margin-top: 0;
+      margin-bottom: var(--space-lg);
+    }
+
+    .info-item {
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid var(--neutral-200);
+    }
+
+    .info-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-item h3 {
+      margin-top: 0;
+      margin-bottom: var(--space-sm);
+      font-size: var(--font-size-lg);
+    }
+
+    .info-item p {
+      margin-bottom: 0;
+    }
+
+    .info-item address {
+      font-style: normal;
+      line-height: var(--line-height-relaxed);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background-color: white;
+      padding: var(--space-lg);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background-color: var(--neutral-50);
+      padding: var(--space-3xl) var(--space-md);
+    }
+
+    .faq-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background-color: white;
+      margin-bottom: var(--space-md);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .faq-item summary {
+      padding: var(--space-lg);
+      cursor: pointer;
+      font-weight: var(--font-weight-semibold);
+      color: var(--neutral-800);
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color var(--transition-base);
+    }
+
+    .faq-item summary:hover {
+      background-color: var(--neutral-50);
+    }
+
+    .faq-item summary::after {
+      content: '▼';
+      display: inline-block;
+      transition: transform var(--transition-base);
+      margin-left: var(--space-md);
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .faq-item p {
+      padding: 0 var(--space-lg) var(--space-lg);
+      margin: 0;
+      color: var(--neutral-700);
+    }
+
+    /* Form Status Messages */
+    .form-status {
+      padding: var(--space-md);
+      border-radius: var(--border-radius-md);
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .form-status.success {
+      background-color: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .form-status.error {
+      background-color: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
+    /* Toast Notifications */
+    #toast-container {
+      position: fixed;
+      bottom: var(--space-lg);
+      right: var(--space-lg);
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      max-width: 400px;
+    }
+
+    .toast {
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--border-radius-md);
+      box-shadow: var(--shadow-lg);
+      animation: slideInRight 0.3s ease-out;
+      background-color: var(--neutral-800);
+      color: white;
+      font-weight: var(--font-weight-medium);
+    }
+
+    .toast-success {
+      background-color: var(--success-color);
+    }
+
+    .toast-error {
+      background-color: var(--error-color);
+    }
+
+    .toast-info {
+      background-color: var(--info-color);
+    }
+
+    @media (max-width: 768px) {
+      #toast-container {
+        left: var(--space-md);
+        right: var(--space-md);
+        bottom: var(--space-md);
+      }
+    }
+  </style>
+</body>
+</html>

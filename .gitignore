@@ -1,0 +1,62 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Production build output
+dist/
+build/
+.next/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# VibeCoding specific
+site-brief.json
+interview-summary.md
+image-prompts.md
+output/
+.claude/skills/*/output/
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.editorconfig
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Vercel deployment
+.vercel/
+.vercelignore
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+
+# OS files
+Thumbs.db
+.DS_Store
+*.pem
+
+# Testing
+coverage/
+.nyc_output/
+
+# Optional npm cache
+.npm
+
+# Cache directories
+.cache/

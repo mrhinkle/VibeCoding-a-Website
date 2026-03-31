@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ SITE_DESCRIPTION }}">
+  <meta name="theme-color" content="{{ PRIMARY_COLOR }}">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="{{ SITE_NAME }}">
+  <meta property="og:description" content="{{ SITE_DESCRIPTION }}">
+  <meta property="og:image" content="{{ PLACEHOLDER: og-image }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ SITE_URL }}">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ SITE_NAME }}">
+  <meta name="twitter:description" content="{{ SITE_DESCRIPTION }}">
+  <meta name="twitter:image" content="{{ PLACEHOLDER: twitter-image }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ PLACEHOLDER: favicon }}">
+  <link rel="apple-touch-icon" href="{{ PLACEHOLDER: apple-touch-icon }}">
+  
+  <title>{{ SITE_NAME }} - {{ SITE_TAGLINE }}</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="navbar-container">
+        <div class="navbar-brand">
+          <a href="/" class="logo">
+            <img src="{{ PLACEHOLDER: logo }}" alt="{{ SITE_NAME }} logo" class="logo-image">
+            <span class="logo-text">{{ SITE_NAME }}</span>
+          </a>
+        </div>
+        
+        <button class="nav-toggle" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="navbar-menu" id="navbar-menu">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">{{ HERO_HEADLINE }}</h1>
+          <p class="hero-subtitle">{{ HERO_SUBTITLE }}</p>
+          <div class="hero-cta">
+            <a href="/contact.html" class="btn btn-primary">Get Started</a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="{{ PLACEHOLDER: hero-image }}" alt="Hero illustration" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title" class="section-title">Key Features</h2>
+        <p class="section-subtitle">What makes us different</p>
+        
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img src="{{ PLACEHOLDER: feature-icon-1 }}" alt="Feature one icon">
+            </div>
+            <h3>Feature One</h3>
+            <p>{{ FEATURE_ONE_DESCRIPTION }}</p>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img src="{{ PLACEHOLDER: feature-icon-2 }}" alt="Feature two icon">
+            </div>
+            <h3>Feature Two</h3>
+            <p>{{ FEATURE_TWO_DESCRIPTION }}</p>
+          </article>
+          
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img src="{{ PLACEHOLDER: feature-icon-3 }}" alt="Feature three icon">
+            </div>
+            <h3>Feature Three</h3>
+            <p>{{ FEATURE_THREE_DESCRIPTION }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <h2 id="testimonials-title" class="section-title">What Our Customers Say</h2>
+        
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">"{{ TESTIMONIAL_ONE_TEXT }}"</p>
+            <footer>
+              <strong>{{ TESTIMONIAL_ONE_AUTHOR }}</strong>
+              <span>{{ TESTIMONIAL_ONE_TITLE }}</span>
+            </footer>
+          </blockquote>
+          
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">"{{ TESTIMONIAL_TWO_TEXT }}"</p>
+            <footer>
+              <strong>{{ TESTIMONIAL_TWO_AUTHOR }}</strong>
+              <span>{{ TESTIMONIAL_TWO_TITLE }}</span>
+            </footer>
+          </blockquote>
+          
+          <blockquote class="testimonial-card">
+            <p class="testimonial-text">"{{ TESTIMONIAL_THREE_TEXT }}"</p>
+            <footer>
+              <strong>{{ TESTIMONIAL_THREE_AUTHOR }}</strong>
+              <span>{{ TESTIMONIAL_THREE_TITLE }}</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container cta-container">
+        <h2 id="cta-title" class="cta-title">Ready to Get Started?</h2>
+        <p class="cta-subtitle">{{ CTA_SUBTITLE }}</p>
+        <a href="/contact.html" class="btn btn-primary btn-large">Contact Us Today</a>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <h2 id="newsletter-title" class="section-title">Stay Updated</h2>
+        <p>Subscribe to our newsletter for the latest updates and insights.</p>
+        
+        <!-- Beehiiv Newsletter Embed Placeholder -->
+        <div class="newsletter-embed">
+          <!-- PLACEHOLDER: Beehiiv embed iframe will be inserted here by form-wiring skill -->
+          <iframe
+            src="https://www.beehiiv.com/embedjs?publication_id={{ BEEHIIV_PUBLICATION_ID }}"
+            style="border: none; width: 100%; height: 220px; max-height: none;"
+            title="Newsletter signup form"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>{{ SITE_NAME }}</h3>
+          <p>{{ SITE_DESCRIPTION }}</p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="{{ SOCIAL_TWITTER }}" aria-label="Twitter">Twitter</a>
+            <a href="{{ SOCIAL_LINKEDIN }}" aria-label="LinkedIn">LinkedIn</a>
+            <a href="{{ SOCIAL_INSTAGRAM }}" aria-label="Instagram">Instagram</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 {{ SITE_NAME }}. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Navigation Script -->
+  <script>
+    // Mobile menu toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('#navbar-menu');
+    
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isOpen);
+        navMenu.classList.toggle('is-open');
+      });
+      
+      // Close menu when clicking a link
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.setAttribute('aria-expanded', 'false');
+          navMenu.classList.remove('is-open');
+        });
+      });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.feature-card, .testimonial-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

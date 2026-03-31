@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Prompt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0F1115;
+            color: #FFFFFF;
+            font-family: 'Inter Tight', sans-serif;
+            overflow: hidden;
+        }
+
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            background-color: #0F1115;
+            background-image: 
+                linear-gradient(rgba(165, 179, 206, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(165, 179, 206, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 80px 100px;
+            box-sizing: border-box;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+        }
+
+        .eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            color: #f44800;
+            font-size: 20px;
+            margin-bottom: 24px;
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid rgba(244, 72, 0, 0.3);
+            background: rgba(244, 72, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        h1 {
+            font-size: 96px;
+            line-height: 1.1;
+            font-weight: 800;
+            margin: 0 0 24px 0;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #A5B3CE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 400;
+            color: #A5B3CE;
+            margin: 0 0 64px 0;
+            line-height: 1.4;
+            max-width: 800px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 64px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 20px;
+            border-top: 1px solid rgba(165, 179, 206, 0.2);
+            padding-top: 32px;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .meta-label {
+            color: #A5B3CE;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .meta-value {
+            color: #FFFFFF;
+            font-weight: 700;
+        }
+
+        .meta-sub {
+            color: #f44800;
+            font-weight: 400;
+        }
+
+        /* Decorative visual element */
+        .visual-node {
+            position: absolute;
+            right: -100px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 600px;
+            height: 600px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 12px;
+            height: 24px;
+            background-color: #f44800;
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    
+        /* AIOS icon — upper right */
+        .aios-icon-topright {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            opacity: 0.9;
+        }
+    
+        .aios-lockup {
+            position: absolute;
+            bottom: 20px;
+            right: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .aios-lockup-icon { height: 36px; width: auto; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- AIOS icon — upper right -->
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iw7x19tx4qi0b6xzjl6ts-899264b5-e2b-prod-us2_1772144766454_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX0ljb25fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdzd4MTl0eDRxaTBiNnh6amw2dHMtODk5MjY0YjUtZTJiLXByb2QtdXMyXzE3NzIxNDQ3NjY0NTRfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMGxqYjI1ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=NBlo8pbQSpil6x4K-KPeYBKUGXuXyGC9PiqKsJuLDibWWJIkm8W~5~YNq-eweXt9xfVPBEawEa3aRFoPJzccKMPQEjWTIrqfTNqoA3mvGOGsiQGj5-PrqiR29dQgvIiXVhNJrHQ69kU6jKcy8~zBqQNYHz~6RVX0PypVCvmcnK5odf0Z0AnmsKQhi5BPPVfCQoeqB1wdaLagvhcCxRgrwSi~Chmsr5SwyqfILfRR-tIH4IJLB9~GyWeMFr-IJ3Yks27Gs6Pebp1akylZ90MvdAy8V6CiyYm0YGn7bzynmYPW5xzMaQCKcXmNdGZKU1s7BGmkDfK48hYNUNaougmXpA__" alt="AIOS" class="aios-icon-topright">
+
+        <!-- Abstract node network background decoration -->
+        <svg class="visual-node" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="#FFFFFF" stroke-width="0.5" fill="none" />
+            <circle cx="50" cy="50" r="30" stroke="#FFFFFF" stroke-width="0.5" fill="none" />
+            <circle cx="50" cy="50" r="20" stroke="#FFFFFF" stroke-width="0.5" fill="none" />
+            <line x1="50" y1="10" x2="50" y2="90" stroke="#FFFFFF" stroke-width="0.5" />
+            <line x1="10" y1="50" x2="90" y2="50" stroke="#FFFFFF" stroke-width="0.5" />
+            <circle cx="50" cy="10" r="2" fill="#FFFFFF" />
+            <circle cx="90" cy="50" r="2" fill="#FFFFFF" />
+            <circle cx="50" cy="90" r="2" fill="#FFFFFF" />
+            <circle cx="10" cy="50" r="2" fill="#FFFFFF" />
+        </svg>
+
+        <div class="content-wrapper">
+            <div class="eyebrow">
+                MarketingProfs AI Friday Forum
+            </div>
+            
+            <h1>Beyond the Prompt</h1>
+            
+            <h2>Creating Reproducible Marketing Workflows<br>That Actually Work<span class="cursor"></span></h2>
+            
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Speaker</span>
+                    <span class="meta-value">Mark Hinkle</span>
+                    <span class="meta-sub">CEO & Founder, Peripety Labs</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Event Context</span>
+                    <span class="meta-value">MarketingProfs AI Friday Forum</span>
+                    <span class="meta-sub">March 13, 2026</span>
+                </div>
+            </div>
+        </div>
+        <div class="aios-lockup">
+            <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iw7x19tx4qi0b6xzjl6ts-899264b5-e2b-prod-us2_1772144766454_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX2xvZ29fd2hpdGVfd29yZG1hcmtzdmdfdGFnbGluZV9wb3dlcnBvaW50.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdzd4MTl0eDRxaTBiNnh6amw2dHMtODk5MjY0YjUtZTJiLXByb2QtdXMyXzE3NzIxNDQ3NjY0NTRfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMnh2WjI5ZmQyaHBkR1ZmZDI5eVpHMWhjbXR6ZG1kZmRHRm5iR2x1WlY5d2IzZGxjbkJ2YVc1MC5zdmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=o6xflpu0iwwr~FmoAexM4Mj1NRBuJqkWDomrvF3xxKbYjjv0tVzCc7viJh4DwEmYK4m3I3q8nzCztFMaWjOIb~pza8mGcJ-fD0cW~QMt8Vz-QfJ9cMcc0DYpWoSQH95X8XMRX7f0uIKs2ncSkY0eM4Wwxqs-rGGFLKKVrG7--b4zYhUjm3GSA-E64usvHO2Z~a7eACuW2JrN-MFis-OAi2c6gqpa-xy5p4vqwUOgzunzuqBDX~DkOEVzsL3iMmkaCy1nS-Q-44Q0LrAZ5saqmzDisfoPcEbyLUKNLTOCrCCG~nKMtdK3fNWt2BVxDbbCtuZlBiJgZOmvjzKD8cVUcQ__" alt="AIOS" class="aios-lockup-icon">
+        </div>
+    </div>
+</body>
+</html>

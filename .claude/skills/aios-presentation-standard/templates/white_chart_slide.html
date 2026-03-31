@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Adoption Gap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #FFFFFF; font-family: 'Inter Tight', sans-serif; color: #111111; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            padding: 52px 80px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        .header {
+            border-bottom: 2px solid #111111;
+            padding-bottom: 16px;
+        }
+        h1 { font-size: 52px; font-weight: 800; letter-spacing: -1px; color: #111111; }
+        .subtitle { font-family: 'JetBrains Mono', monospace; font-size: 22px; color: #555555; margin-top: 6px; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* ── CSS Bar Chart ── */
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        .bar-row {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .bar-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #555555;
+        }
+        .bar-track {
+            background: #F0F2F5;
+            border-radius: 4px;
+            height: 64px;
+            width: 100%;
+            position: relative;
+            overflow: visible;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: width 0s;
+        }
+        .bar-fill.access {
+            background: #111111;
+            width: 100%;
+        }
+        .bar-fill.workflow {
+            background: #f44800;
+            width: 8%;
+        }
+        .bar-pct {
+            font-size: 28px;
+            font-weight: 800;
+            color: #FFFFFF;
+            padding-left: 16px;
+            white-space: nowrap;
+        }
+        .bar-pct-outside {
+            font-size: 28px;
+            font-weight: 800;
+            color: #f44800;
+            padding-left: 12px;
+            white-space: nowrap;
+            position: absolute;
+            left: 100%;
+        }
+
+        /* Gap callout */
+        .gap-callout {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 4px;
+        }
+        .gap-line {
+            flex: 1;
+            height: 2px;
+            background: repeating-linear-gradient(90deg, #f44800 0, #f44800 8px, transparent 8px, transparent 16px);
+        }
+        .gap-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 15px;
+            font-weight: 700;
+            color: #f44800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        /* Source note */
+        .source-note {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: #999999;
+            margin-top: 8px;
+        }
+
+        /* Insight panel */
+        .insight-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 4px solid #f44800;
+            padding-left: 28px;
+            gap: 20px;
+        }
+        .insight-title {
+            font-size: 30px;
+            font-weight: 800;
+            color: #111111;
+            line-height: 1.2;
+        }
+        .insight-text {
+            font-size: 22px;
+            line-height: 1.55;
+            color: #555555;
+        }
+        .insight-text strong {
+            color: #f44800;
+            font-weight: 800;
+        }
+
+        .aios-icon-topright { position: absolute; top: 40px; right: 40px; width: 50px; height: 50px; object-fit: contain; }
+        .aios-logo-bottom {
+            position: absolute;
+            bottom: 8px;
+            right: 40px;
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+        .slide-footer {
+            position: absolute;
+            bottom: 24px;
+            left: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #f44800;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container">
+    <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX0ljb25fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMGxqYjI1ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&amp;Key-Pair-Id=K2HSFNDJXOU9YS&amp;Signature=X5KfJVTDDMpWHIkpziQ7ABwpV-5NG6DB4f97EiNVqXafNJJcqetv6UdQxfecm-8WNQtPlAa0qmgZa29xEwtuRW~p~YP85Ll7NOTXq~z1Gq6VWgJjHXlDkAYa1~EuriFqM2Pzq5CjcsLpkst-piGkYjO~gMJ7Cy84T~RMkSK1rawIK8mcJrT9Jgf41I3N946MgAgp6MIjAlNhq85BEbhJmywwYjdKR2owct5nPmX42NiUyGhVd66pXFmP45Q0kveyDSbSTSlnv1u7~oxaVTA8LQV53aoeC1bIC3FVS-hKflrBMNO-BUnjOheey4KL9KXbr4EwIacPnTBQSeRp2N0Z2g__" alt="AIOS" class="aios-icon-topright">
+
+    <div class="header">
+        <h1>The Adoption Gap</h1>
+        <p class="subtitle">// Access ≠ Utility.</p>
+    </div>
+
+    <div class="content-grid">
+        <!-- CSS Bar Chart -->
+        <div class="bar-chart">
+
+            <div class="bar-row">
+                <div class="bar-label">Has AI Tool Access</div>
+                <div class="bar-track">
+                    <div class="bar-fill access">
+                        <span class="bar-pct">~100%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gap callout between bars -->
+            <div class="gap-callout">
+                <div class="gap-line"></div>
+                <div class="gap-label">92% Gap</div>
+                <div class="gap-line"></div>
+            </div>
+
+            <div class="bar-row">
+                <div class="bar-label">Has a Reproducible Workflow</div>
+                <div class="bar-track">
+                    <div class="bar-fill workflow">
+                        <span class="bar-pct-outside">&lt;8%</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="source-note">Source: McKinsey State of AI 2024 / Nielsen Norman Group AI Productivity Research</p>
+        </div>
+
+        <!-- Insight Panel -->
+        <div class="insight-panel">
+            <div class="insight-title">The Reality Check</div>
+            <p class="insight-text">
+                Nearly <strong>100%</strong> of your team has access to an AI tool.<br><br>
+                Fewer than <strong>8%</strong> have a reproducible workflow that saves actual time.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer text -->
+    <div class="slide-footer">AI FOR BUSINESS PROFESSIONALS | BEYOND THE PROMPT: CREATING REPRODUCIBLE WORKFLOWS</div>
+    <!-- AIOS Logo Bottom Right -->
+    <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX2xvZ29fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMnh2WjI5ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&amp;Key-Pair-Id=K2HSFNDJXOU9YS&amp;Signature=AImjU9SRSopJSCIJLVYJPLGJCkkVUxve8OcCZY6aByZGLUVreWnZrmPFUpPOQXLElSt8V6Bd7meqyvOFHGmQHR87~6sC474194CeF~M0k0~Ea6i1CC-DfGCTdmOroJqOSuIlQYy8A9FVptm6GvHHJJHTWBOkawiPIMqKVVh06AInQVN2Ynq8NNHrVSXmEGS35VC~UDmRBYiIiX56RiAXAjR2bgmqcjI~9H7Sag6xMcFscmtU88F0k2BqNwJO19mXUmvCbKMqBAbWWPi~itMOnxsOOggKeAr8IJ9bfu4qG~hCcI8hb-l2oF0pOZR0hABHHGdKmIZtV74XaJwgOynAAg__" alt="AIOS" class="aios-logo-bottom">
+</div>
+</body>
+</html>

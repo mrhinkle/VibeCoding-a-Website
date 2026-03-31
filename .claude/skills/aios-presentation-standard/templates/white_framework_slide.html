@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.M.A.R.T. Framework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #FFFFFF; font-family: 'Inter Tight', sans-serif; color: #111111; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            padding: 60px 80px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .header {
+            border-bottom: 2px solid #111111;
+            padding-bottom: 20px;
+        }
+        h1 { font-size: 56px; font-weight: 800; letter-spacing: -1px; color: #111111; }
+        .subtitle { font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #555555; margin-top: 8px; }
+
+        .framework-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .step-box {
+            flex: 1;
+            height: 280px;
+            background: #F5F7FA;
+            border: 2px solid #E1E4E8;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .step-box:hover {
+            border-color: #f44800;
+            background: #FFF5F0;
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .letter {
+            font-size: 80px;
+            font-weight: 800;
+            color: #f44800;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .step-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #111111;
+            margin-bottom: 10px;
+        }
+
+        .step-desc {
+            font-size: 16px;
+            color: #555555;
+            line-height: 1.4;
+        }
+
+        .connector {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #E1E4E8;
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+
+        .aios-icon-topright { position: absolute; top: 40px; right: 40px; width: 50px; height: 50px; object-fit: contain; }
+            /* NEW AIOS logo bottom right */
+                        .aios-logo-bottom { 
+            position: absolute; 
+            bottom: 8px; 
+            right: 40px; 
+            height: 48px; 
+            width: auto; 
+            object-fit: contain; 
+        }
+        /* Footer text bottom left */
+        .slide-footer {
+            position: absolute;
+            bottom: 24px;
+            left: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #f44800;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX0ljb25fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMGxqYjI1ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=X5KfJVTDDMpWHIkpziQ7ABwpV-5NG6DB4f97EiNVqXafNJJcqetv6UdQxfecm-8WNQtPlAa0qmgZa29xEwtuRW~p~YP85Ll7NOTXq~z1Gq6VWgJjHXlDkAYa1~EuriFqM2Pzq5CjcsLpkst-piGkYjO~gMJ7Cy84T~RMkSK1rawIK8mcJrT9Jgf41I3N946MgAgp6MIjAlNhq85BEbhJmywwYjdKR2owct5nPmX42NiUyGhVd66pXFmP45Q0kveyDSbSTSlnv1u7~oxaVTA8LQV53aoeC1bIC3FVS-hKflrBMNO-BUnjOheey4KL9KXbr4EwIacPnTBQSeRp2N0Z2g__" alt="AIOS" class="aios-icon-topright">
+
+        <div class="header">
+            <h1>The S.M.A.R.T. Framework</h1>
+            <p class="subtitle">// A system for reproducible work.</p>
+        </div>
+
+        <div class="framework-container">
+            <div class="connector"></div>
+            
+            <div class="step-box">
+                <div class="letter">S</div>
+                <div class="step-title">Sort</div>
+                <div class="step-desc">Audit your tasks.</div>
+            </div>
+
+            <div class="step-box">
+                <div class="letter">M</div>
+                <div class="step-title">Match</div>
+                <div class="step-desc">Pick the right tool.</div>
+            </div>
+
+            <div class="step-box">
+                <div class="letter">A</div>
+                <div class="step-title">Automate</div>
+                <div class="step-desc">Build the workflow.</div>
+            </div>
+
+            <div class="step-box">
+                <div class="letter">R</div>
+                <div class="step-title">Refine</div>
+                <div class="step-desc">Iterate and improve.</div>
+            </div>
+
+            <div class="step-box">
+                <div class="letter">T</div>
+                <div class="step-title">Take</div>
+                <div class="step-desc">Control the outcome.</div>
+            </div>
+        </div>
+        <!-- Footer text -->
+        <div class="slide-footer">AI FOR BUSINESS PROFESSIONALS | BEYOND THE PROMPT: CREATING REPRODUCIBLE WORKFLOWS</div>
+        <!-- AIOS Logo Bottom Right -->
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX2xvZ29fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMnh2WjI5ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=AImjU9SRSopJSCIJLVYJPLGJCkkVUxve8OcCZY6aByZGLUVreWnZrmPFUpPOQXLElSt8V6Bd7meqyvOFHGmQHR87~6sC474194CeF~M0k0~Ea6i1CC-DfGCTdmOroJqOSuIlQYy8A9FVptm6GvHHJJHTWBOkawiPIMqKVVh06AInQVN2Ynq8NNHrVSXmEGS35VC~UDmRBYiIiX56RiAXAjR2bgmqcjI~9H7Sag6xMcFscmtU88F0k2BqNwJO19mXUmvCbKMqBAbWWPi~itMOnxsOOggKeAr8IJ9bfu4qG~hCcI8hb-l2oF0pOZR0hABHHGdKmIZtV74XaJwgOynAAg__" alt="AIOS" class="aios-logo-bottom">
+    </div>
+</body>
+</html>

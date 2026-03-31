@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI is Different</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #FFFFFF; font-family: 'Inter Tight', sans-serif; color: #111111; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            padding: 60px 80px 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+.header {
+            border-bottom: 2px solid #111111;
+            padding-bottom: 20px;
+        }
+        h1 { font-size: 56px; font-weight: 800; letter-spacing: -1px; color: #111111; }
+        .subtitle { font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #555555; margin-top: 8px; }
+.comparison-container {
+            display: flex;
+            height: 100%;
+            gap: 40px;
+            margin-top: 20px;
+        }
+.side {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #E1E4E8;
+        }
+.side.old {
+            background: #F5F7FA;
+            border-left: 6px solid #999999;
+        }
+.side.new {
+            background: #FFF5F0;
+            border-left: 6px solid #f44800;
+        }
+.side-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+.old .side-title { color: #555555; }
+        .new .side-title { color: #f44800; }
+.main-statement {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #111111;
+        }
+.icon-row {
+            font-size: 64px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+.desc {
+            font-size: 22px;
+            line-height: 1.5;
+            color: #333333;
+        }
+.highlight {
+            font-weight: 700;
+            background: rgba(244, 72, 0, 0.1);
+            padding: 0 4px;
+        }
+.aios-icon-topright { position: absolute; top: 40px; right: 40px; width: 50px; height: 50px; object-fit: contain; }
+            /* NEW AIOS logo bottom right */
+                        .aios-logo-bottom { 
+            position: absolute; 
+            bottom: 8px; 
+            right: 40px; 
+            height: 48px; 
+            width: auto; 
+            object-fit: contain; 
+        }
+        /* Footer text bottom left */
+        .slide-footer {
+            position: absolute;
+            bottom: 24px;
+            left: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #f44800;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body><div class="slide-container">
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX0ljb25fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMGxqYjI1ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&amp;Key-Pair-Id=K2HSFNDJXOU9YS&amp;Signature=X5KfJVTDDMpWHIkpziQ7ABwpV-5NG6DB4f97EiNVqXafNJJcqetv6UdQxfecm-8WNQtPlAa0qmgZa29xEwtuRW~p~YP85Ll7NOTXq~z1Gq6VWgJjHXlDkAYa1~EuriFqM2Pzq5CjcsLpkst-piGkYjO~gMJ7Cy84T~RMkSK1rawIK8mcJrT9Jgf41I3N946MgAgp6MIjAlNhq85BEbhJmywwYjdKR2owct5nPmX42NiUyGhVd66pXFmP45Q0kveyDSbSTSlnv1u7~oxaVTA8LQV53aoeC1bIC3FVS-hKflrBMNO-BUnjOheey4KL9KXbr4EwIacPnTBQSeRp2N0Z2g__" alt="AIOS" class="aios-icon-topright">
+<div class="header">
+            <h1>Why AI is Different</h1>
+            <p class="subtitle">// It's not just another tech upgrade.</p>
+        </div>
+<div class="comparison-container">
+            <!-- Old Paradigm -->
+            <div class="side old" style="transform: translate(0px, -45px);">
+                <div class="side-title">Previous Tech</div>
+                <div class="icon-row">🖥️ 📱</div>
+                <div class="main-statement">Faster Tools</div>
+                <p class="desc">
+                    Desktop computers and smartphones made us faster, but the work remained the same. You are still the operator.
+                </p>
+            </div>
+<!-- New Paradigm -->
+            <div class="side new" style="transform: translate(0px, -45px);">
+                <div class="side-title">Generative AI</div>
+                <div class="icon-row">🧠 🤝</div>
+                <div class="main-statement">Evolving Assistant</div>
+                <p class="desc">
+                    AI isn't just a tool; it's an <span class="highlight">Executive Admin</span>. It learns your context, adapts to your style, and gets better the more you train it.
+                </p>
+            </div>
+        </div>
+        <!-- Footer text -->
+        <div class="slide-footer" style="transform: translate(1.80469px, -32px);">AI FOR BUSINESS PROFESSIONALS | BEYOND THE PROMPT: CREATING REPRODUCIBLE WORKFLOWS</div>
+        <!-- AIOS Logo Bottom Right -->
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iji7et0v61bgnuubitewt-7b0f7640-e2b-prod-us2_1772415268759_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX2xvZ29fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pamk3ZXQwdjYxYmdudXViaXRld3QtN2IwZjc2NDAtZTJiLXByb2QtdXMyXzE3NzI0MTUyNjg3NTlfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMnh2WjI5ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&amp;Key-Pair-Id=K2HSFNDJXOU9YS&amp;Signature=AImjU9SRSopJSCIJLVYJPLGJCkkVUxve8OcCZY6aByZGLUVreWnZrmPFUpPOQXLElSt8V6Bd7meqyvOFHGmQHR87~6sC474194CeF~M0k0~Ea6i1CC-DfGCTdmOroJqOSuIlQYy8A9FVptm6GvHHJJHTWBOkawiPIMqKVVh06AInQVN2Ynq8NNHrVSXmEGS35VC~UDmRBYiIiX56RiAXAjR2bgmqcjI~9H7Sag6xMcFscmtU88F0k2BqNwJO19mXUmvCbKMqBAbWWPi~itMOnxsOOggKeAr8IJ9bfu4qG~hCcI8hb-l2oF0pOZR0hABHHGdKmIZtV74XaJwgOynAAg__" alt="AIOS" class="aios-logo-bottom" style="transform: translate(0px, -32.75px);">
+    </div>
+</body>
+</html>

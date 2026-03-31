@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The S.M.A.R.T. Framework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #0F1115; font-family: 'Inter Tight', sans-serif; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: #0F1115;
+            padding: 48px 72px 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .slide-header { border-bottom: 2px solid #333; padding-bottom: 16px; }
+        h1 { font-size: 46px; font-weight: 800; color: #FFFFFF; letter-spacing: -1px; margin: 0; }
+        .subtitle { font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #A5B3CE; margin-top: 6px; }
+        .framework-flow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 Equal Columns */
+            gap: 16px;
+            flex: 1;
+            align-items: stretch; /* Stretch to fill height */
+        }
+        .step-card {
+            border: 1px solid #333;
+            background: #1A1D24;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: relative;
+            height: 100%; /* Fill the grid cell height */
+            min-height: 400px; /* Ensure sufficient height for content */
+        }
+        .step-letter {
+            font-size: 64px;
+            font-weight: 800;
+            color: #f44800;
+            line-height: 1;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .step-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-align: center;
+            min-height: 60px; /* Fixed height for title alignment */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .step-desc {
+            font-size: 20px;
+            color: #A5B3CE;
+            line-height: 1.3;
+            text-align: center;
+            flex: 1; /* Push content to fill space */
+        }
+        /* Connectors */
+        .step-card:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -14px;
+            top: 50px;
+            color: #333;
+            font-size: 24px;
+            z-index: 2;
+            background: #0F1115;
+            padding: 0 4px;
+        }
+        /* AIOS icon upper right */
+        .aios-icon-topright { position: absolute; top: 24px; right: 32px; width: 44px; height: 44px; object-fit: contain; opacity: 0.9; }
+        /* AIOS lockup bottom right */
+        .aios-lockup { position: absolute; bottom: 20px; right: 80px; display: flex; align-items: center; }
+        .aios-lockup-icon { height: 36px; width: auto; object-fit: contain; }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iw7x19tx4qi0b6xzjl6ts-899264b5-e2b-prod-us2_1772144766454_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX0ljb25fY29sb3I.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdzd4MTl0eDRxaTBiNnh6amw2dHMtODk5MjY0YjUtZTJiLXByb2QtdXMyXzE3NzIxNDQ3NjY0NTRfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMGxqYjI1ZlkyOXNiM0kuc3ZnIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=NBlo8pbQSpil6x4K-KPeYBKUGXuXyGC9PiqKsJuLDibWWJIkm8W~5~YNq-eweXt9xfVPBEawEa3aRFoPJzccKMPQEjWTIrqfTNqoA3mvGOGsiQGj5-PrqiR29dQgvIiXVhNJrHQ69kU6jKcy8~zBqQNYHz~6RVX0PypVCvmcnK5odf0Z0AnmsKQhi5BPPVfCQoeqB1wdaLagvhcCxRgrwSi~Chmsr5SwyqfILfRR-tIH4IJLB9~GyWeMFr-IJ3Yks27Gs6Pebp1akylZ90MvdAy8V6CiyYm0YGn7bzynmYPW5xzMaQCKcXmNdGZKU1s7BGmkDfK48hYNUNaougmXpA__" alt="AIOS" class="aios-icon-topright">
+
+        <div class="slide-header">
+            <h1>The S.M.A.R.T. Framework</h1>
+            <p class="subtitle">&gt; A 5-step process for AI workflow automation</p>
+        </div>
+
+        <div class="framework-flow">
+            <div class="step-card">
+                <div class="step-letter">S</div>
+                <div class="step-title">Sort</div>
+                <div class="step-desc">Audit your workflows to find high-value targets. Don't automate everything.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-letter">M</div>
+                <div class="step-title">Match</div>
+                <div class="step-desc">Align tasks with the right AI capabilities (LLM vs. traditional software).</div>
+            </div>
+            <div class="step-card">
+                <div class="step-letter">A</div>
+                <div class="step-title">Automate</div>
+                <div class="step-desc">Build the "lazy" first draft system. Connect the pipes.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-letter">R</div>
+                <div class="step-title">Refine</div>
+                <div class="step-desc">Add the human loop. Polish the output. Improve the prompt.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-letter">T</div>
+                <div class="step-title">Take Control</div>
+                <div class="step-desc">Scale the system. Document it. Delegate it.</div>
+            </div>
+        </div>
+
+        <div class="aios-lockup">
+            <img src="https://private-us-east-1.manuscdn.com/sessionFile/wGRQ3B79Ze15KFpoz4jJcJ/sandbox/slides_resource_iw7x19tx4qi0b6xzjl6ts-899264b5-e2b-prod-us2_1772144766454_na1fn_L2hvbWUvdWJ1bnR1L3VwbG9hZC9BSU9TX2xvZ29fd2hpdGVfd29yZG1hcmtzdmdfdGFnbGluZV9wb3dlcnBvaW50.svg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvd0dSUTNCNzlaZTE1S0Zwb3o0akpjSi9zYW5kYm94L3NsaWRlc19yZXNvdXJjZV9pdzd4MTl0eDRxaTBiNnh6amw2dHMtODk5MjY0YjUtZTJiLXByb2QtdXMyXzE3NzIxNDQ3NjY0NTRfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwzVndiRzloWkM5QlNVOVRYMnh2WjI5ZmQyaHBkR1ZmZDI5eVpHMWhjbXR6ZG1kZmRHRm5iR2x1WlY5d2IzZGxjbkJ2YVc1MC5zdmciLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=o6xflpu0iwwr~FmoAexM4Mj1NRBuJqkWDomrvF3xxKbYjjv0tVzCc7viJh4DwEmYK4m3I3q8nzCztFMaWjOIb~pza8mGcJ-fD0cW~QMt8Vz-QfJ9cMcc0DYpWoSQH95X8XMRX7f0uIKs2ncSkY0eM4Wwxqs-rGGFLKKVrG7--b4zYhUjm3GSA-E64usvHO2Z~a7eACuW2JrN-MFis-OAi2c6gqpa-xy5p4vqwUOgzunzuqBDX~DkOEVzsL3iMmkaCy1nS-Q-44Q0LrAZ5saqmzDisfoPcEbyLUKNLTOCrCCG~nKMtdK3fNWt2BVxDbbCtuZlBiJgZOmvjzKD8cVUcQ__" alt="AIOS" class="aios-lockup-icon">
+        </div>
+    </div>
+</body>
+</html>
