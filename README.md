@@ -348,6 +348,41 @@ VibeCoding is structured as a **1-hour core course** plus **optional deep dives*
 
 ---
 
+## Why This Architecture: Composable, Portable, Yours
+
+VibeCoding deliberately chooses **open infrastructure** over proprietary platforms: GitHub for version control, Vercel for hosting, your choice of AI agent (Claude Code, Claude Cowork, or Manus), and output in standard HTML/CSS/JavaScript — or plain HTML if that's all you need.
+
+This is a deliberate architectural decision, not a limitation.
+
+### The Composability Advantage
+
+Most website builders lock you into their ecosystem. Your site lives on their servers, depends on their rendering engine, and can't leave without a painful migration. VibeCoding takes the opposite approach:
+
+- **Your code is standard web code.** HTML, CSS, and JavaScript that any browser understands and any developer can read. There's no proprietary template language, no platform-specific markup, no vendor SDK required to render your pages.
+- **Your hosting is portable.** We reference Vercel because it's excellent — free tier, global CDN, automatic HTTPS, serverless functions, preview deployments. But your site is a folder of files. Move it to Netlify, Cloudflare Pages, AWS S3, a traditional web host, or even a Raspberry Pi in your closet. The code doesn't care where it runs.
+- **Your version control is standard Git.** GitHub today, GitLab tomorrow, self-hosted Gitea next year. Your entire project history travels with you.
+- **Your AI agent is interchangeable.** The skills work with Claude Code (CLI), Claude Cowork (desktop), or Manus. As new agents emerge, they can consume the same `site-brief.json` and `brand-profile.json` specifications.
+
+### How This Compares to Platform Builders
+
+Platforms like Replit, Lovable, and Base44 are genuinely useful — they lower the barrier to entry and get you running fast. VibeCoding doesn't diminish their value. But they solve a different problem.
+
+VibeCoding gives you a **composable architecture** where every layer is replaceable. Your AI agents generate the code, but the code itself has zero dependencies on those agents. If you outgrow the skills, hire a developer — they'll find clean, standard HTML/CSS/JS that follows established conventions. If a better hosting platform appears next year, deploy there. If you want to add React, Vue, or Astro later, your existing pages are valid starting points.
+
+The tradeoff is that composability requires slightly more setup than a one-click platform builder. That's what the 19 skills are for — they handle the complexity so you get platform freedom without the platform friction.
+
+### Highly Programmable by Design
+
+VibeCoding supports two output modes depending on your needs:
+
+- **Plain HTML/CSS** — Zero build step, works everywhere, maximum portability. Perfect for landing pages, portfolios, and small business sites.
+- **Vite + JavaScript** — Full build pipeline with hot reload, code splitting, and modern JS. Choose this when you need interactive features, API integrations, or plan to scale into a web application.
+
+Either way, the output is yours. Your agents built it, but they don't own it. That's the point.
+
+
+---
+
 ## Tech Stack
 
 VibeCoding builds websites using **modern, proven technologies**:
