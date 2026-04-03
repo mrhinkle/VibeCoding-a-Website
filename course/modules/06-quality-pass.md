@@ -1,5 +1,5 @@
 # Module 06: The Quality Pass
-**Time: 8 minutes core | 28 minutes expanded**
+**Time: 8 minutes core | 50 minutes expanded**
 
 ---
 
@@ -13,7 +13,9 @@ This module teaches you to audit your site for performance, SEO, accessibility, 
 
 ---
 
-## Core: Running the Quality Checks (8 minutes)
+## Core Quality Checks (8 minutes)
+
+These are the essential audits. Every site needs them before launch.
 
 ### Step 1: Run performance-optimizer
 
@@ -69,28 +71,157 @@ Read the report carefully. These are real issues that users notice.
 
 ---
 
-### Step 4: Review and Fix
+### Step 4: Run link-checker
 
-Claude will suggest fixes for issues found. Review them.
+Dead links hurt SEO and frustrate users.
 
-1. For each issue, ask yourself: "Is this real?"
-2. If yes, approve the fix
-3. Claude applies it
-4. Re-run the auditor to confirm it's gone
+1. Use a free tool like [brokenlinkcheck.com](https://www.brokenlinkcheck.com/)
+2. Enter your site URL
+3. It scans every link and reports which ones are broken
+4. Fix broken links (either update the URL or remove the link)
 
-After fixing, your site should score well on all three audits.
+Takes 5 minutes. Prevents embarrassing broken links.
 
 ---
 
 ## That's Core
 
-You've audited your site. It's ready to launch.
+You've audited your site with the four essential checks. It's ready to launch.
 
-But if you want to go deeper (and we recommend it), read the expanded section.
+But if you want to go deeper (and we recommend it), read the advanced section below.
 
 ---
 
-## Expanded: Deep Quality Audits (20 minutes more)
+## Bonus: Run All Audits Together
+
+If you want to run the core four audits in one sweep, you can tell Claude Code:
+
+"Run a pre-launch review: performance-optimizer, seo-aeo-auditor, content-auditor, and link-checker."
+
+Claude will execute them all, then give you a summary report. This takes 15–20 minutes but saves time if you're auditing multiple times.
+
+---
+
+## Advanced Quality Checks (42 minutes more)
+
+These audits dig deeper into security, code quality, user experience, testing, and copy. They're optional but highly recommended for professional sites.
+
+### Step 5: Run qa-tester
+
+QA stands for Quality Assurance. This skill tests your site like a real user would.
+
+1. In Claude Code chat, type: `/qa-tester`
+2. Let it test your site thoroughly
+3. It checks:
+   - **Cross-browser compatibility** (Chrome, Firefox, Safari, Edge)
+   - **Mobile responsiveness** (iPhone, Android, tablets)
+   - **Form testing** (can users submit forms without errors?)
+   - **JavaScript console** (any JS errors that break functionality?)
+   - **Accessibility** (keyboard navigation, screen readers, color contrast)
+   - **Visual regression** (does the site look the same across browsers?)
+
+The qa-tester is like hiring a QA engineer for 10 minutes. It catches bugs that users would find.
+
+Common issues:
+- Forms that don't submit
+- Buttons that don't work on mobile
+- Images that break in certain browsers
+- Navigation that's inaccessible
+
+Review the report and fix any issues found.
+
+---
+
+### Step 6: Run security-auditor
+
+Before going live, ensure your site is secure.
+
+1. In Claude Code chat, type: `/security-auditor`
+2. It scans for:
+   - **Secrets scanning** (are any API keys exposed in code?)
+   - **Security headers** (is HTTPS enabled? Are security headers set?)
+   - **XSS/CSRF prevention** (is your site vulnerable to common attacks?)
+   - **Dependency vulnerabilities** (do your libraries have known security issues?)
+   - **Privacy compliance** (is user data handled securely?)
+
+Security breaches are expensive and damage trust. This 5-minute audit prevents disasters.
+
+If issues are found, Claude will explain them in plain language and suggest fixes.
+
+---
+
+### Step 7: Run ux-reviewer
+
+UX (User Experience) is how easy your site is to use.
+
+1. In Claude Code chat, type: `/ux-reviewer`
+2. It evaluates your site using Nielsen's 10 Usability Heuristics:
+   - **Navigation clarity** (can users find what they need?)
+   - **Visual hierarchy** (what's important? What's secondary?)
+   - **Mobile UX** (is the site touch-friendly?)
+   - **User journey** (can users complete their goal from landing to conversion?)
+   - **Consistency** (do patterns repeat across pages?)
+   - **Error recovery** (if something goes wrong, can users fix it?)
+
+The report explains what works and what doesn't.
+
+Common UX issues:
+- Hidden navigation (users can't find the menu)
+- Weak visual hierarchy (everything looks equally important)
+- Poor mobile experience (buttons too small, text too cramped)
+- Confusing user flows (users get lost)
+
+Good UX increases conversions. Invest 5 minutes here.
+
+---
+
+### Step 8: Run code-auditor
+
+Your code should be clean and error-free.
+
+1. In Claude Code chat, type: `/code-auditor`
+2. It reviews:
+   - **JavaScript errors** (any bugs in your JS?)
+   - **HTML validation** (is your HTML properly structured?)
+   - **CSS audit** (is your CSS efficient? Any unused styles?)
+   - **API integration testing** (do your API calls work?)
+   - **Error handling** (if something fails, does your site handle it gracefully?)
+
+Think of this as a code review before deployment.
+
+Common issues:
+- Unused CSS that bloats the file
+- Missing error handling in API calls
+- Invalid HTML (affects SEO and accessibility)
+- Console errors that crash features
+
+Fix these and your site will be more robust.
+
+---
+
+### Step 9: Run copy-editor
+
+Your words matter. They persuade, convert, and communicate.
+
+1. In Claude Code chat, type: `/copy-editor`
+2. It analyzes your copy for:
+   - **Persuasion frameworks** (does your copy use proven persuasion techniques?)
+   - **Headline scoring** (are your headlines compelling and clear?)
+   - **CTA optimization** (are your calls-to-action strong and actionable?)
+   - **Readability** (is your copy easy to scan and understand?)
+   - **Message clarity** (do visitors understand your value proposition in 10 seconds?)
+
+Copy is not marketing—it's how you communicate value.
+
+Common copy issues:
+- Weak headlines that don't grab attention
+- CTAs like "Click Here" instead of "Get Free Consultation"
+- Walls of text instead of scannable sections
+- Vague value propositions ("We're the best" instead of "Save 5 hours per week")
+
+Great copy increases engagement and conversions. Spend 5 minutes here.
+
+---
 
 ### Accessibility Audit (WCAG Standards)
 
@@ -245,57 +376,46 @@ If your site fails on mobile, tell Claude Code: "Optimize for mobile. Make text 
 
 ---
 
-### Running Link-Checker
+### Privacy Compliance Checklist
 
-Dead links hurt SEO and frustrate users.
+Beyond security, ensure privacy compliance:
 
-1. Use a free tool like [brokenlinkcheck.com](https://www.brokenlinkcheck.com/)
-2. Enter your site URL
-3. It scans every link and reports which ones are broken
-4. Fix broken links (either update the URL or remove the link)
-
-Takes 5 minutes. Prevents embarrassing broken links.
-
----
-
-### Security & Privacy Audit
-
-Before going live, ensure:
-
-**Security:**
-- Your site uses HTTPS (secure connection)
-  - You'll see a 🔒 lock icon in the browser
-  - Claude Code handles this on Vercel automatically
-- No sensitive data exposed in code
-- No API keys visible anywhere
-
-**Privacy:**
-- You have a privacy policy
-- You have a terms of service (if selling or collecting data)
+**Privacy Requirements:**
+- You have a privacy policy (explain how you collect and use data)
+- You have terms of service (if selling or collecting data)
 - Your form has a privacy statement
 - You're not tracking users without consent
+- You comply with GDPR (if serving EU users) or CCPA (if serving California residents)
 
 For privacy policy/terms of service, you can use free generators like [termly.io](https://termly.io/). Customize them for your business.
+
+The security-auditor skill checks for privacy compliance as part of its review.
 
 ---
 
 ## Checklist: Ready to Launch?
 
-Before you deploy, verify:
+**Core Audits (Required):**
 
 - [ ] Performance audit: score 80+
 - [ ] SEO audit: score 80+
 - [ ] No typos or grammar errors
 - [ ] All links work
-- [ ] Images have alt text
-- [ ] Color contrast is sufficient
-- [ ] Site works on mobile
-- [ ] Forms are tested and working
-- [ ] Brand voice is consistent
-- [ ] Privacy policy is visible
+
+**Advanced Audits (Recommended):**
+
+- [ ] QA testing: cross-browser, mobile, forms, JS console
+- [ ] Security audit: no exposed secrets, headers set, vulnerabilities fixed
+- [ ] UX review: navigation clear, visual hierarchy strong, mobile-friendly
+- [ ] Code audit: no JS errors, valid HTML, efficient CSS, error handling in place
+- [ ] Copy review: headlines strong, CTAs clear, messaging persuasive
+- [ ] Privacy policy is visible and accurate
+- [ ] Brand voice is consistent across all pages
 - [ ] You're proud of how it looks
 
-If all are true, you're ready for Module 07.
+If core audits pass, you can launch. If you've also completed the advanced audits, your site is truly professional.
+
+You're ready for Module 07.
 
 ---
 
@@ -311,15 +431,26 @@ Real users give you feedback better than any audit tool. Deploy, then refine bas
 
 ## Tip: Create a Quality Checklist
 
-Before every deployment, run through this:
-1. Performance check
-2. SEO check
-3. Content check
+**For quick launches (core checks):**
+1. Performance audit
+2. SEO audit
+3. Content audit
 4. Link check
-5. Mobile test
-6. Form test
 
-It takes 10 minutes. It prevents disasters.
+Takes 8 minutes. Gets your site live.
+
+**For professional launches (all checks):**
+1. Performance audit
+2. SEO audit
+3. Content audit
+4. Link check
+5. QA testing
+6. Security audit
+7. UX review
+8. Code audit
+9. Copy review
+
+Takes 50 minutes. Ensures your site is bulletproof.
 
 ---
 
