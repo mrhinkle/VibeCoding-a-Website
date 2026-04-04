@@ -1,0 +1,41 @@
+{
+  "business_name": "Community Heart Foundation",
+  "tagline": "Together, we're creating lasting change",
+  "industry": "Nonprofit & Community Services",
+  "target_audience": "Donors, volunteers, community members, and beneficiaries interested in supporting local causes and making a difference",
+  "pages": [
+    {
+      "name": "Home",
+      "description": "Inspiring hero highlighting mission and impact, donation CTA, volunteer opportunities"
+    },
+    {
+      "name": "Mission",
+      "description": "Organization story, values, history, and detailed description of the cause"
+    },
+    {
+      "name": "Programs",
+      "description": "Detailed overview of each program, how they serve the community, and impact metrics"
+    },
+    {
+      "name": "Get Involved/Donate",
+      "description": "Ways to support: donations, volunteering, sponsorships, fundraising, and event participation"
+    },
+    {
+      "name": "News",
+      "description": "Blog posts, press releases, impact stories, and upcoming events"
+    },
+    {
+      "name": "Contact",
+      "description": "Contact form, phone, email, address, social media links, and newsletter signup"
+    }
+  ],
+  "key_features": [
+    "Transparent impact metrics and stories",
+    "Multiple ways to give and volunteer",
+    "Beneficiary testimonials and success stories",
+    "Event calendar and signup",
+    "Newsletter and social media integration"
+  ],
+  "tone": "Mission-driven, hopeful, transparent, inclusive, community-focused",
+  "call_to_action": "Donate today and change a life"
+}

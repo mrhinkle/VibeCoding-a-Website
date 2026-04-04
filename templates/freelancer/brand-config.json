@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "primary": "#2d3436",
+    "secondary": "#ff7675",
+    "accent": "#74b9ff",
+    "background": "#f5f6fa",
+    "text": "#2d3436"
+  },
+  "fonts": {
+    "heading": "Space Mono, monospace",
+    "body": "Inter, sans-serif"
+  },
+  "tone_keywords": [
+    "confident",
+    "creative",
+    "professional",
+    "innovative",
+    "personal",
+    "modern",
+    "approachable"
+  ],
+  "logo_style": "Minimalist geometric mark with bold sans-serif name, charcoal gray with pop of color accent"
+}

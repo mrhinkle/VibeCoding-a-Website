@@ -1,6 +1,8 @@
 # VibeCoding: A Website
 
-![MIT License](https://img.shields.io/badge/license-MIT-blue) ![19 Skills](https://img.shields.io/badge/skills-19-brightgreen) ![Status](https://img.shields.io/badge/status-production-green)
+![MIT License](https://img.shields.io/badge/license-MIT-blue) ![21 Skills](https://img.shields.io/badge/skills-21-brightgreen) ![Status](https://img.shields.io/badge/status-production-green)
+
+> **New here? No coding experience?** Start with the [Plain-English Guide](docs/plain-english-guide.md) — zero jargon, all answers.
 
 **Learn to build beautiful, functional websites using Claude Code or Claude Cowork—no code required, 19 specialized skills doing the work.**
 

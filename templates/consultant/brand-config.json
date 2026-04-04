@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "primary": "#1e3a5f",
+    "secondary": "#d4af37",
+    "accent": "#2d5a8c",
+    "background": "#f8f9fa",
+    "text": "#2c3e50"
+  },
+  "fonts": {
+    "heading": "Georgia, serif",
+    "body": "Inter, -apple-system, sans-serif"
+  },
+  "tone_keywords": [
+    "authoritative",
+    "trustworthy",
+    "results-focused",
+    "sophisticated",
+    "strategic",
+    "approachable",
+    "professional"
+  ],
+  "logo_style": "Classic serif with subtle geometric accent, gold and navy color scheme"
+}

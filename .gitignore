@@ -17,6 +17,7 @@ out/
 
 # VibeCoding specific
 site-brief.json
+!templates/**/site-brief.json
 interview-summary.md
 image-prompts.md
 output/

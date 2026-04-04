@@ -1,0 +1,37 @@
+{
+  "business_name": "Elevate Yoga & Fitness",
+  "tagline": "Your journey to wellness starts here",
+  "industry": "Fitness & Wellness",
+  "target_audience": "Health-conscious individuals aged 18-65 seeking yoga, fitness, and wellness classes in a welcoming community environment",
+  "pages": [
+    {
+      "name": "Home",
+      "description": "Energetic hero with studio images, class schedule preview, and membership CTA"
+    },
+    {
+      "name": "Classes/Schedule",
+      "description": "Full weekly schedule with class types (yoga, HIIT, pilates, etc.), durations, and difficulty levels"
+    },
+    {
+      "name": "Instructors",
+      "description": "Instructor bios, photos, specialties, and certification details"
+    },
+    {
+      "name": "Pricing",
+      "description": "Membership tiers, class packages, trial class offer, and member benefits"
+    },
+    {
+      "name": "Contact",
+      "description": "Contact form, location/map, hours, phone, email, and class booking system"
+    }
+  ],
+  "key_features": [
+    "Weekly class schedule with real-time booking",
+    "Instructor profiles and expertise",
+    "Member testimonials and transformation stories",
+    "Trial class offer and promotional pricing",
+    "Community and events section"
+  ],
+  "tone": "Motivating, friendly, inclusive, energetic, supportive",
+  "call_to_action": "Try your first class free this week"
+}

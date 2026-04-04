@@ -1,0 +1,37 @@
+{
+  "business_name": "Alex Chen Creative",
+  "tagline": "Digital design and development for ambitious brands",
+  "industry": "Freelance Creative Services",
+  "target_audience": "Small businesses, startups, and agencies seeking high-quality design or development work from an independent specialist",
+  "pages": [
+    {
+      "name": "Home",
+      "description": "Bold hero showcasing best portfolio pieces and expertise value proposition"
+    },
+    {
+      "name": "Portfolio",
+      "description": "Curated selection of projects with case studies showing process, challenges, and results"
+    },
+    {
+      "name": "About",
+      "description": "Personal story, expertise, tools/skills, and why clients choose to work with you"
+    },
+    {
+      "name": "Services",
+      "description": "Detailed service offerings, packages, deliverables, timeline, and pricing structure"
+    },
+    {
+      "name": "Contact",
+      "description": "Contact form, email, location, Calendly link for consultation calls"
+    }
+  ],
+  "key_features": [
+    "High-impact portfolio with case studies",
+    "Client testimonials and success metrics",
+    "Clear service packages and pricing",
+    "Downloadable resources or case study PDFs",
+    "Calendar booking for consultations"
+  ],
+  "tone": "Confident, personal, creative, professional, innovative",
+  "call_to_action": "Let's create something amazing together"
+}

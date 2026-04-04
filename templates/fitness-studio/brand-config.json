@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "primary": "#ff6b6b",
+    "secondary": "#20c997",
+    "accent": "#ff8787",
+    "background": "#f8f9fa",
+    "text": "#2d3436"
+  },
+  "fonts": {
+    "heading": "Montserrat, sans-serif",
+    "body": "Open Sans, sans-serif"
+  },
+  "tone_keywords": [
+    "motivating",
+    "energetic",
+    "friendly",
+    "inclusive",
+    "supportive",
+    "inspiring",
+    "welcoming"
+  ],
+  "logo_style": "Dynamic geometric design, coral and teal gradient with modern sans-serif lettering"
+}

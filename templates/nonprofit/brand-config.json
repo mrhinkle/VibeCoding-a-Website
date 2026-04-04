@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "primary": "#2d8659",
+    "secondary": "#ffffff",
+    "accent": "#52b788",
+    "background": "#f1faee",
+    "text": "#1b4332"
+  },
+  "fonts": {
+    "heading": "Quicksand, sans-serif",
+    "body": "Poppins, sans-serif"
+  },
+  "tone_keywords": [
+    "hopeful",
+    "mission-driven",
+    "transparent",
+    "inclusive",
+    "community-focused",
+    "compassionate",
+    "empowering"
+  ],
+  "logo_style": "Friendly rounded sans-serif with subtle heart or hands icon, forest green with white"
+}

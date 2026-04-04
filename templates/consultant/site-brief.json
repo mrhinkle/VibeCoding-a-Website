@@ -1,0 +1,36 @@
+{
+  "business_name": "Strategic Consulting Group",
+  "tagline": "Transforming business strategy into measurable results",
+  "industry": "Management Consulting",
+  "target_audience": "Mid-market companies seeking strategic transformation and organizational optimization",
+  "pages": [
+    {
+      "name": "Home",
+      "description": "Hero section with consultant's value proposition and CTA to schedule a consultation"
+    },
+    {
+      "name": "About",
+      "description": "Bio of consultant, experience, credentials, and consulting philosophy"
+    },
+    {
+      "name": "Services",
+      "description": "Core service offerings: strategy development, implementation support, team training"
+    },
+    {
+      "name": "Case Studies",
+      "description": "3-5 detailed case studies showing before/after metrics and client results"
+    },
+    {
+      "name": "Contact",
+      "description": "Contact form, calendar link for scheduling consultations, email and phone"
+    }
+  ],
+  "key_features": [
+    "Client success metrics and testimonials",
+    "Free discovery call scheduling",
+    "Industry expertise highlights",
+    "Case study ROI documentation"
+  ],
+  "tone": "Authoritative, professional, approachable, results-driven",
+  "call_to_action": "Schedule your free 30-minute strategy session today"
+}

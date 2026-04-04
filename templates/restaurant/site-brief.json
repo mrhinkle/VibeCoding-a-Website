@@ -1,0 +1,37 @@
+{
+  "business_name": "La Bella Taverna",
+  "tagline": "Authentic flavors, warm hospitality",
+  "industry": "Food & Beverage",
+  "target_audience": "Food enthusiasts and families in the neighborhood seeking authentic cuisine, casual dining, and memorable dining experiences",
+  "pages": [
+    {
+      "name": "Home",
+      "description": "Welcoming hero with restaurant ambiance photo, featured dishes, and reservation CTA"
+    },
+    {
+      "name": "Menu",
+      "description": "Digital menu with appetizers, mains, desserts, drinks, pricing, and allergen information"
+    },
+    {
+      "name": "About/Story",
+      "description": "Restaurant history, chef's story, sourcing philosophy, and values"
+    },
+    {
+      "name": "Reservations",
+      "description": "Online reservation system, seating options, party size options, special occasion notes"
+    },
+    {
+      "name": "Contact",
+      "description": "Address, phone, hours, email, location map, parking info, and walk-in policy"
+    }
+  ],
+  "key_features": [
+    "High-quality food photography",
+    "Online reservation system",
+    "Chef's specials and seasonal menu updates",
+    "Reviews and testimonials",
+    "Catering and private events information"
+  ],
+  "tone": "Warm, inviting, authentic, sophisticated, hospitable",
+  "call_to_action": "Reserve your table tonight"
+}

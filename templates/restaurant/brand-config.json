@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "primary": "#6b2423",
+    "secondary": "#f5e6d3",
+    "accent": "#c44536",
+    "background": "#faf8f3",
+    "text": "#3d2817"
+  },
+  "fonts": {
+    "heading": "Playfair Display, serif",
+    "body": "Lato, sans-serif"
+  },
+  "tone_keywords": [
+    "warm",
+    "inviting",
+    "authentic",
+    "sophisticated",
+    "hospitable",
+    "elegant",
+    "comforting"
+  ],
+  "logo_style": "Elegant serif wordmark with small decorative fork and knife elements, burgundy and cream"
+}
