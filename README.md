@@ -3,6 +3,7 @@
 ![MIT License](https://img.shields.io/badge/license-MIT-blue) ![21 Skills](https://img.shields.io/badge/skills-21-brightgreen) ![Status](https://img.shields.io/badge/status-production-green)
 
 > **New here? No coding experience?** Start with the [Plain-English Guide](docs/plain-english-guide.md) — zero jargon, all answers.
+> **Have questions about vibe coding?** Read the [Vibe Coding FAQ](docs/faq-vibe-coding.md) — tools, costs, GitHub, Vercel, API keys, and getting started.
 
 **Learn to build beautiful, functional websites using Claude Code or Claude Cowork—no code required, 19 specialized skills doing the work.**
 
@@ -467,4 +468,4 @@ Special thanks to the Claude Code, Claude Cowork, and Manus teams for making thi
 **Want to optimize further?** After deployment, run the audit battery:
 - qa-tester, code-auditor, security-auditor, ux-reviewer, seo-aeo-auditor, performance-optimizer, link-checker, content-auditor
 
-**Questions?** See [Docs](./docs/) for guides or [open a ticket](https://github.com/mrhinkle/VibeCoding-a-Website/issues) if you run into trouble.
+**Questions?** See the [Vibe Coding FAQ](./docs/faq-vibe-coding.md), browse [Docs](./docs/) for guides, or [open a ticket](https://github.com/mrhinkle/VibeCoding-a-Website/issues) if you run into trouble.
